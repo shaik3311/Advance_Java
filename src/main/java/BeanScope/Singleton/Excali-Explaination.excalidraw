@@ -1,0 +1,1288 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw-jetbrains-plugin",
+  "elements": [
+    {
+      "id": "ZRETbw8LQ71yLDway_Gu_",
+      "type": "text",
+      "x": 2105.485344390594,
+      "y": -583.1154134640974,
+      "width": 443.33984375,
+      "height": 450,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2m",
+      "roundness": null,
+      "seed": 541536372,
+      "version": 139,
+      "versionNonce": 1191172522,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1789448133714,
+      "created": 1789448089260,
+      "link": null,
+      "locked": false,
+      "text": "Bean Scope \n1. Singleton Bean Scope\n2. Prototype Bean scope\n\n\n\n\n1.singleton \n\n",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Bean Scope \n1. Singleton Bean Scope\n2. Prototype Bean scope\n\n\n\n\n1.singleton \n\n",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "TPAdcehHwp_nMHB4hBR-s",
+      "type": "rectangle",
+      "x": 2139.8778697204343,
+      "y": -186.12549994171536,
+      "width": 722.7557895652203,
+      "height": 422.8573957773058,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2n",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1629550378,
+      "version": 291,
+      "versionNonce": 960221418,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448258517,
+      "created": 1789448144960,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "0LnVrANf_E82PZOlWbzMq",
+      "type": "rectangle",
+      "x": 2199.903411120171,
+      "y": -142.06866717871742,
+      "width": 290.06789606925895,
+      "height": 112.35068056461535,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2o",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1301159402,
+      "version": 254,
+      "versionNonce": 1111782826,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "HhQwvTD54WXcHFuFWcKny",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1789448264858,
+      "created": 1789448157084,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "x2Kfo0xWYNt9Ag9dLtMD3",
+      "type": "text",
+      "x": 3732.111984847259,
+      "y": -699.2049746598361,
+      "width": 578.5347552404679,
+      "height": 810.1110025794816,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2p",
+      "roundness": null,
+      "seed": 1835368118,
+      "version": 344,
+      "versionNonce": 434635062,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448282487,
+      "created": 1789448169990,
+      "link": null,
+      "locked": false,
+      "text": "package BeanScope.Singleton;\n\nimport org.springframework.stereotype.Component;\n\n@Component\npublic class Account {\n    private double amount = 1000;\n\n\n    public double getAmount() {\n        return amount;\n    }\n\n    public void deposit(double amount){\n        this.amount += amount;\n        System.out.println(\"Deposit success\");\n    }\n\n    public void withDraw(double amount){\n        if(amount<=this.amount){\n            this.amount -= amount;\n            System.out.println(\"Withdraw success\");\n        }else{\n            System.out.println(\"Insufficient balance\");\n        }\n    }\n}\n",
+      "fontSize": 23.146028645128045,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "package BeanScope.Singleton;\n\nimport org.springframework.stereotype.Component;\n\n@Component\npublic class Account {\n    private double amount = 1000;\n\n\n    public double getAmount() {\n        return amount;\n    }\n\n    public void deposit(double amount){\n        this.amount += amount;\n        System.out.println(\"Deposit success\");\n    }\n\n    public void withDraw(double amount){\n        if(amount<=this.amount){\n            this.amount -= amount;\n            System.out.println(\"Withdraw success\");\n        }else{\n            System.out.println(\"Insufficient balance\");\n        }\n    }\n}\n",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "dRriv8vMMH_UDavV92FJw",
+      "type": "rectangle",
+      "x": 3668.9233793752674,
+      "y": -753.8970759079486,
+      "width": 819.2809276090604,
+      "height": 907.3274467475949,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2q",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1770877878,
+      "version": 649,
+      "versionNonce": 246385974,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "HhQwvTD54WXcHFuFWcKny",
+          "type": "arrow"
+        },
+        {
+          "id": "56JlbXVSwoPL4UJhGKl-F",
+          "type": "arrow"
+        },
+        {
+          "id": "2PRxB8EEg1Gt1RzWsmUXa",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1789448620624,
+      "created": 1789448181230,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "HhQwvTD54WXcHFuFWcKny",
+      "type": "arrow",
+      "x": 2344.880487654814,
+      "y": -145.27690615635694,
+      "width": 1320.185220279598,
+      "height": 154.8657136331195,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2r",
+      "roundness": null,
+      "seed": 1594008298,
+      "version": 967,
+      "versionNonce": 2012588982,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448282488,
+      "created": 1789448202323,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -154.8657136331195
+        ],
+        [
+          1320.185220279598,
+          -154.8657136331195
+        ]
+      ],
+      "startBinding": {
+        "elementId": "0LnVrANf_E82PZOlWbzMq",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.4998039372824185,
+          -0.02855558116351944
+        ]
+      },
+      "endBinding": {
+        "elementId": "dRriv8vMMH_UDavV92FJw",
+        "mode": "orbit",
+        "fixedPoint": [
+          -0.004708606426507758,
+          0.5001
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": true,
+      "fixedSegments": null,
+      "startIsSpecial": null,
+      "endIsSpecial": null,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "4wmy3GiIkT-odaBNeEB53",
+      "type": "text",
+      "x": 2264.9221084157202,
+      "y": -104.13174328476623,
+      "width": 140.79595947265625,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2s",
+      "roundness": null,
+      "seed": 94103542,
+      "version": 30,
+      "versionNonce": 1357812522,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448264860,
+      "created": 1789448237941,
+      "link": null,
+      "locked": false,
+      "text": "Account",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Account",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "ooHJUSRIIjb1h6gnoHgNK",
+      "type": "rectangle",
+      "x": 2534.4392379929577,
+      "y": -135.76627724335827,
+      "width": 281.1727620490419,
+      "height": 112.24683721284498,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2t",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 830125622,
+      "version": 135,
+      "versionNonce": 1962797546,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "n4-N_0CfVxuckToRUYbOO",
+          "type": "arrow"
+        },
+        {
+          "id": "KcUb_XEqzOaCLMK46sYac",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1789448508871,
+      "created": 1789448296655,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "yboqSIGtCKtSMJBMJwENO",
+      "type": "rectangle",
+      "x": 2542.2165619252405,
+      "y": 46.49374648407087,
+      "width": 281.1727620490419,
+      "height": 112.24683721284498,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2tV",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 81902570,
+      "version": 199,
+      "versionNonce": 1885053878,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "NmeY8j2B6JoDMudBchDrB"
+        },
+        {
+          "id": "kxc1x7_c-m2fZNCPZzHzV",
+          "type": "arrow"
+        },
+        {
+          "id": "t76vPLAYpjjIEi_YEeR8u",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1789448494947,
+      "created": 1789448309278,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "NmeY8j2B6JoDMudBchDrB",
+      "type": "text",
+      "x": 2630.206957537164,
+      "y": 80.11716509049336,
+      "width": 105.19197082519531,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2td",
+      "roundness": null,
+      "seed": 221418678,
+      "version": 7,
+      "versionNonce": 339811702,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448317438,
+      "created": 1789448315431,
+      "link": null,
+      "locked": false,
+      "text": "User2",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "yboqSIGtCKtSMJBMJwENO",
+      "originalText": "User2",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "uoGOkkLkwzfmP8sNtXs2Q",
+      "type": "text",
+      "x": 2640.8514445409746,
+      "y": -97.97527741772376,
+      "width": 95.36396789550781,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2u",
+      "roundness": null,
+      "seed": 569992310,
+      "version": 7,
+      "versionNonce": 1696404470,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448305876,
+      "created": 1789448303500,
+      "link": null,
+      "locked": false,
+      "text": "User1",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "User1",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "pHIHa_rswMZbMRYrMr4Z-",
+      "type": "rectangle",
+      "x": 3624.231111325169,
+      "y": 286.6545139521277,
+      "width": 796.8032889490287,
+      "height": 801.5888208269525,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2v",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 490096950,
+      "version": 79,
+      "versionNonce": 78836214,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "n4-N_0CfVxuckToRUYbOO",
+          "type": "arrow"
+        },
+        {
+          "id": "2PRxB8EEg1Gt1RzWsmUXa",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1789448624332,
+      "created": 1789448340582,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "_i-gcuH0fYWjg15ccMiW4",
+      "type": "text",
+      "x": 3664.9086799565384,
+      "y": 332.3493472724065,
+      "width": 615.8263991670437,
+      "height": 728.7213959044009,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2w",
+      "roundness": null,
+      "seed": 84149366,
+      "version": 26,
+      "versionNonce": 19198762,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448355257,
+      "created": 1789448344200,
+      "link": null,
+      "locked": false,
+      "text": "package BeanScope.Singleton;\n\nimport org.springframework.stereotype.Component;\n\n@Component\npublic class User1 {\n    private Account account;\n\n    public User1(Account account){\n        this.account = account;\n    }\n\n    public void getBalance(){\n        System.out.println(account.getAmount());\n    }\n    public void withDraw(double amount){\n        account.withDraw(amount);\n    }\n    public void deposit(double amount){\n        account.deposit(amount);\n    }\n}\n",
+      "fontSize": 25.346831161892208,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "package BeanScope.Singleton;\n\nimport org.springframework.stereotype.Component;\n\n@Component\npublic class User1 {\n    private Account account;\n\n    public User1(Account account){\n        this.account = account;\n    }\n\n    public void getBalance(){\n        System.out.println(account.getAmount());\n    }\n    public void withDraw(double amount){\n        account.withDraw(amount);\n    }\n    public void deposit(double amount){\n        account.deposit(amount);\n    }\n}\n",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "n4-N_0CfVxuckToRUYbOO",
+      "type": "arrow",
+      "x": 2821.6120000419996,
+      "y": -79.74285863693578,
+      "width": 796.6191112831693,
+      "height": 767.0917830025397,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2y",
+      "roundness": null,
+      "seed": 485339306,
+      "version": 121,
+      "versionNonce": 353753770,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448370629,
+      "created": 1789448367473,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          398.30955564158467,
+          0
+        ],
+        [
+          398.30955564158467,
+          767.0917830025397
+        ],
+        [
+          796.6191112831693,
+          767.0917830025397
+        ]
+      ],
+      "startBinding": {
+        "elementId": "ooHJUSRIIjb1h6gnoHgNK",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0213391935843112,
+          0.49910910630105
+        ]
+      },
+      "endBinding": {
+        "elementId": "pHIHa_rswMZbMRYrMr4Z-",
+        "mode": "orbit",
+        "fixedPoint": [
+          -0.007530089399999726,
+          0.499875247761194
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": true,
+      "fixedSegments": null,
+      "startIsSpecial": null,
+      "endIsSpecial": null,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "tQ4WvKmes_Ci0wmHuVxsu",
+      "type": "rectangle",
+      "x": 3612.2670990740203,
+      "y": 1118.7516025307777,
+      "width": 966.6924089604095,
+      "height": 1098.2963611667044,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b2z",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1292234858,
+      "version": 119,
+      "versionNonce": 937704694,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "kxc1x7_c-m2fZNCPZzHzV",
+          "type": "arrow"
+        },
+        {
+          "id": "56JlbXVSwoPL4UJhGKl-F",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1789448600765,
+      "created": 1789448389493,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "P-O5qQzgrlhEV9AsedTev",
+      "type": "text",
+      "x": 3684.0511725809115,
+      "y": 1194.9547036027532,
+      "width": 874.6557006835938,
+      "height": 1035,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b30",
+      "roundness": null,
+      "seed": 506019434,
+      "version": 45,
+      "versionNonce": 1828537590,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448400838,
+      "created": 1789448392709,
+      "link": null,
+      "locked": false,
+      "text": "package BeanScope.Singleton;\n\nimport org.springframework.stereotype.Component;\n\n@Component\npublic class User2 {\n    private Account account;\n\n    public User2(Account account){\n        this.account = account;\n    }\n\n    public void getBalance(){\n        System.out.println(account.getAmount());\n    }\n    public void withDraw(double amount){\n        account.withDraw(amount);\n    }\n    public void deposit(double amount){\n        account.deposit(amount);\n    }\n}\n",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "package BeanScope.Singleton;\n\nimport org.springframework.stereotype.Component;\n\n@Component\npublic class User2 {\n    private Account account;\n\n    public User2(Account account){\n        this.account = account;\n    }\n\n    public void getBalance(){\n        System.out.println(account.getAmount());\n    }\n    public void withDraw(double amount){\n        account.withDraw(amount);\n    }\n    public void deposit(double amount){\n        account.deposit(amount);\n    }\n}\n",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "kxc1x7_c-m2fZNCPZzHzV",
+      "type": "arrow",
+      "x": 2829.3893239742824,
+      "y": 102.51716509049336,
+      "width": 776.8777750997378,
+      "height": 1565.4924476597532,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b32",
+      "roundness": null,
+      "seed": 968394934,
+      "version": 177,
+      "versionNonce": 1309908470,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448430033,
+      "created": 1789448424696,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          388.4388875498689,
+          0
+        ],
+        [
+          388.4388875498689,
+          1565.4924476597532
+        ],
+        [
+          776.8777750997378,
+          1565.4924476597532
+        ]
+      ],
+      "startBinding": {
+        "elementId": "yboqSIGtCKtSMJBMJwENO",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0213391935843112,
+          0.49910910630105
+        ]
+      },
+      "endBinding": {
+        "elementId": "tQ4WvKmes_Ci0wmHuVxsu",
+        "mode": "orbit",
+        "fixedPoint": [
+          -0.006206731266724707,
+          0.5001
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": true,
+      "fixedSegments": null,
+      "startIsSpecial": null,
+      "endIsSpecial": null,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "qn6DlZCxYJtaKr6iUmX7N",
+      "type": "rectangle",
+      "x": 1622.3861479506772,
+      "y": 342.93559130881385,
+      "width": 1188.9587342963928,
+      "height": 696.449609033582,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b33",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 603292842,
+      "version": 102,
+      "versionNonce": 1966199018,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448452385,
+      "created": 1789448449688,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "p6YWWf_Wy7pB06Xyv1Yjj",
+      "type": "text",
+      "x": 1703.892948565967,
+      "y": 396.0461658684875,
+      "width": 918.8439078585754,
+      "height": 593.6964378716673,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b34",
+      "roundness": null,
+      "seed": 1981338934,
+      "version": 69,
+      "versionNonce": 776641834,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "t76vPLAYpjjIEi_YEeR8u",
+          "type": "arrow"
+        },
+        {
+          "id": "KcUb_XEqzOaCLMK46sYac",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1789448512712,
+      "created": 1789448453921,
+      "link": null,
+      "locked": false,
+      "text": "package BeanScope.Singleton;\n\nimport org.springframework.context.ApplicationContext;\nimport org.springframework.context.annotation.AnnotationConfigApplicationContext;\nimport org.springframework.context.support.ApplicationObjectSupport;\n\npublic class Main {\n    public static void main(String[] args) {\n        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);\n\n        User1 u1 = context.getBean(User1.class);\n        User2 u2 = context.getBean(User2.class);\n\n        u1.getBalance();\n        u2.getBalance();\n\n        u1.withDraw(500);\n\n        u1.getBalance();\n        u2.getBalance();\n\n    }\n}\n",
+      "fontSize": 19.789881262388892,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "package BeanScope.Singleton;\n\nimport org.springframework.context.ApplicationContext;\nimport org.springframework.context.annotation.AnnotationConfigApplicationContext;\nimport org.springframework.context.support.ApplicationObjectSupport;\n\npublic class Main {\n    public static void main(String[] args) {\n        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);\n\n        User1 u1 = context.getBean(User1.class);\n        User2 u2 = context.getBean(User2.class);\n\n        u1.getBalance();\n        u2.getBalance();\n\n        u1.withDraw(500);\n\n        u1.getBalance();\n        u2.getBalance();\n\n    }\n}\n",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "ZN0oR2GLmN9RwY-ifYE_X",
+      "type": "text",
+      "x": 1754.8044256329692,
+      "y": 286.13083756175547,
+      "width": 76.03196716308594,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b35",
+      "roundness": null,
+      "seed": 1660765290,
+      "version": 6,
+      "versionNonce": 72565290,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448482679,
+      "created": 1789448481241,
+      "link": null,
+      "locked": false,
+      "text": "Main",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Main",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "t76vPLAYpjjIEi_YEeR8u",
+      "type": "arrow",
+      "x": 2682.7029429497616,
+      "y": 164.74058369691585,
+      "width": 53.966086525219,
+      "height": 528.0538011074054,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b36",
+      "roundness": null,
+      "seed": 1947232246,
+      "version": 149,
+      "versionNonce": 856207606,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448502297,
+      "created": 1789448494946,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          528.0538011074054
+        ],
+        [
+          -53.966086525219,
+          528.0538011074054
+        ]
+      ],
+      "startBinding": {
+        "elementId": "yboqSIGtCKtSMJBMJwENO",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.49964434677359515,
+          1.0534536219370052
+        ]
+      },
+      "endBinding": {
+        "elementId": "p6YWWf_Wy7pB06Xyv1Yjj",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0065299448020324,
+          0.4998315637527515
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": true,
+      "fixedSegments": null,
+      "startIsSpecial": null,
+      "endIsSpecial": null,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "KcUb_XEqzOaCLMK46sYac",
+      "type": "arrow",
+      "x": 2674.9256190174788,
+      "y": -17.51944003051328,
+      "width": 46.1887625929362,
+      "height": 710.3138248348345,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b37",
+      "roundness": null,
+      "seed": 1945649578,
+      "version": 106,
+      "versionNonce": 282163818,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448512712,
+      "created": 1789448508871,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          710.3138248348345
+        ],
+        [
+          -46.1887625929362,
+          710.3138248348345
+        ]
+      ],
+      "startBinding": {
+        "elementId": "ooHJUSRIIjb1h6gnoHgNK",
+        "mode": "orbit",
+        "fixedPoint": [
+          0.49964434677359515,
+          1.0534536219370054
+        ]
+      },
+      "endBinding": {
+        "elementId": "p6YWWf_Wy7pB06Xyv1Yjj",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0065299448020324,
+          0.4998315637527515
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": true,
+      "fixedSegments": null,
+      "startIsSpecial": null,
+      "endIsSpecial": null,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "vplEk864lzEz9FDxYdNGv",
+      "type": "text",
+      "x": 2383.280259625136,
+      "y": 253.01572723571292,
+      "width": 249.98391723632812,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b39",
+      "roundness": null,
+      "seed": 1134255594,
+      "version": 52,
+      "versionNonce": 1929686954,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448544435,
+      "created": 1789448528668,
+      "link": null,
+      "locked": false,
+      "text": "IOC Container",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "IOC Container",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    },
+    {
+      "id": "56JlbXVSwoPL4UJhGKl-F",
+      "type": "arrow",
+      "x": 4494.204306984328,
+      "y": -300.33335253415123,
+      "width": 1186.7444383441798,
+      "height": 1979.7616542872156,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3C",
+      "roundness": null,
+      "seed": 22306102,
+      "version": 440,
+      "versionNonce": 998549238,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448611699,
+      "created": 1789448592667,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1186.7444383441798,
+          0
+        ],
+        [
+          1186.7444383441798,
+          1979.7616542872156
+        ],
+        [
+          130.7552010501031,
+          1979.7616542872156
+        ],
+        [
+          130.7552010501031,
+          1968.342965284398
+        ],
+        [
+          90.7552010501031,
+          1968.342965284398
+        ]
+      ],
+      "startBinding": {
+        "elementId": "dRriv8vMMH_UDavV92FJw",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0073234952722625,
+          0.49988978620633767
+        ]
+      },
+      "endBinding": {
+        "elementId": "tQ4WvKmes_Ci0wmHuVxsu",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0062067312667256,
+          0.5001
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": true,
+      "fixedSegments": [
+        {
+          "index": 2,
+          "start": [
+            1186.7444383441798,
+            0
+          ],
+          "end": [
+            1186.7444383441798,
+            1979.7616542872156
+          ]
+        },
+        {
+          "index": 3,
+          "start": [
+            1186.7444383441798,
+            1979.7616542872156
+          ],
+          "end": [
+            130.7552010501031,
+            1979.7616542872156
+          ]
+        }
+      ],
+      "startIsSpecial": false,
+      "endIsSpecial": false,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "2PRxB8EEg1Gt1RzWsmUXa",
+      "type": "arrow",
+      "x": 4494.204306984328,
+      "y": -300.33335253415123,
+      "width": 793.284120024241,
+      "height": 987.6822768997552,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3D",
+      "roundness": null,
+      "seed": 1332994422,
+      "version": 191,
+      "versionNonce": 800993974,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448627710,
+      "created": 1789448620623,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          726.1142133141111,
+          0
+        ],
+        [
+          726.1142133141111,
+          987.6822768997552
+        ],
+        [
+          -67.16990671012991,
+          987.6822768997552
+        ]
+      ],
+      "startBinding": {
+        "elementId": "dRriv8vMMH_UDavV92FJw",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0073234952722625,
+          0.49988978620633767
+        ]
+      },
+      "endBinding": {
+        "elementId": "pHIHa_rswMZbMRYrMr4Z-",
+        "mode": "orbit",
+        "fixedPoint": [
+          1.0075300893999997,
+          0.499875247761194
+        ]
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": true,
+      "fixedSegments": [
+        {
+          "index": 2,
+          "start": [
+            726.1142133141111,
+            0
+          ],
+          "end": [
+            726.1142133141111,
+            987.6822768997552
+          ]
+        }
+      ],
+      "startIsSpecial": false,
+      "endIsSpecial": false,
+      "lastCommittedPoint": null
+    },
+    {
+      "id": "aRhmmKKeGD6zaYm-Bg__C",
+      "type": "text",
+      "x": 4701.950179902376,
+      "y": -373.485651515547,
+      "width": 774.86376953125,
+      "height": 45,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b3E",
+      "roundness": null,
+      "seed": 1058301558,
+      "version": 61,
+      "versionNonce": 1037810678,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1789448657265,
+      "created": 1789448633458,
+      "link": null,
+      "locked": false,
+      "text": "Same Account object is shared by two user ",
+      "fontSize": 36,
+      "baseFontSize": null,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Same Account object is shared by two user ",
+      "autoResize": true,
+      "lineHeight": 1.25,
+      "labelPosition": null
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
