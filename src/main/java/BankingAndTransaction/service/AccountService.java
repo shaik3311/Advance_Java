@@ -3,6 +3,7 @@ package BankingAndTransaction.service;
 import BankingAndTransaction.model.Account;
 import BankingAndTransaction.repository.AccountRepository;
 import BankingAndTransaction.repository.CustomerRepository;
+import CircularDependencyDemo.simple.A;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -75,7 +76,11 @@ public class AccountService {
                     accountRepository.viewAccount(id);
                 }
                 case 3 -> {
-
+                    System.out.println("Enter Details to check balance : ");
+                    System.out.print("Enter Account Number : ");
+                    long acc_no = sc.nextLong();
+                    AccountRepository accountRepository = new AccountRepository();
+                    System.out.println(accountRepository.getBalance(acc_no));
                 }
                 case 5 -> {
                     turn = false;

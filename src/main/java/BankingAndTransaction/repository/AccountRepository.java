@@ -3,6 +3,7 @@ package BankingAndTransaction.repository;
 import BankingAndTransaction.model.Account;
 import BankingAndTransaction.service.AccountService;
 
+import java.net.ConnectException;
 import java.sql.*;
 
 public class AccountRepository {
@@ -78,5 +79,51 @@ public class AccountRepository {
         }catch (SQLException e){
             System.out.println("Failed at viewAccount "+e.getMessage());
         }
+    }
+
+    public double getBalance(long acc_no){
+        String sql = """
+                SELECT balance FROM accounts WHERE account_number=?
+                """;
+        double balance = 0;
+        try(
+                Connection connection = DriverManager.getConnection(url,username,password);
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ){
+            preparedStatement.setDouble(1,acc_no);
+            if(checkActive(acc_no)){
+                ResultSet set = preparedStatement.executeQuery();
+                set.next();
+                balance = set.getDouble(1);
+            }else{
+                System.out.println("Account is Closed");
+            }
+
+        }catch (SQLException e){
+            System.out.println("Failed at getBalance : "+e.getMessage());
+        }
+        return balance;
+    }
+    
+    public boolean checkActive(long acc_no){
+        String sql = """
+                SELECT status FROM accounts WHERE account_number=?
+                """;
+        try(
+                Connection connection = DriverManager.getConnection(sql);
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ){
+            preparedStatement.setLong(1,acc_no);
+            ResultSet set = preparedStatement.executeQuery();
+            set.next();
+            if(set.getString(1)=="Closed"){
+                return false;
+            }
+
+
+        }catch (SQLException e){
+            System.out.println("Failed at checkActive : "+e.getMessage());
+        }
+        return true;
     }
 }
