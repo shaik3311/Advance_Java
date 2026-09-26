@@ -104,19 +104,19 @@ public class AccountRepository {
         }
         return balance;
     }
-    
+
     public boolean checkActive(long acc_no){
         String sql = """
                 SELECT status FROM accounts WHERE account_number=?
                 """;
         try(
-                Connection connection = DriverManager.getConnection(sql);
+                Connection connection = DriverManager.getConnection(url,username,password);
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 ){
             preparedStatement.setLong(1,acc_no);
             ResultSet set = preparedStatement.executeQuery();
             set.next();
-            if(set.getString(1)=="Closed"){
+            if(!"Closed".equals(set.getString(1))){
                 return false;
             }
 
@@ -125,5 +125,27 @@ public class AccountRepository {
             System.out.println("Failed at checkActive : "+e.getMessage());
         }
         return true;
+    }
+
+    public void closeAccount(long acc_no){
+        String sql = """
+                Update accounts SET status=? WHERE account_number=?
+                """;
+        try(
+                Connection connection = DriverManager.getConnection(url,username,password);
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ){
+            preparedStatement.setString(1,"Closed");
+            preparedStatement.setLong(2,acc_no);
+            int res = preparedStatement.executeUpdate();
+            if(res>0){
+                System.out.println(res+" Accounts closed");
+            }else{
+                System.out.println("No account with the given account number found");
+            }
+
+        }catch (SQLException e){
+            System.out.println("Failed in closeAccount : "+e.getMessage());
+        }
     }
 }

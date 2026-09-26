@@ -82,6 +82,13 @@ public class AccountService {
                     AccountRepository accountRepository = new AccountRepository();
                     System.out.println(accountRepository.getBalance(acc_no));
                 }
+                case 4 -> {
+                    System.out.println("Enter Details to close an account : ");
+                    System.out.println("Enter Account Number : ");
+                    long acc_no = sc.nextLong();
+                    AccountRepository accountRepository = new AccountRepository();
+                    accountRepository.closeAccount(acc_no);
+                }
                 case 5 -> {
                     turn = false;
                 }
