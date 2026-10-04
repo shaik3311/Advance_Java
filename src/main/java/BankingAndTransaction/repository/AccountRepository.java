@@ -116,7 +116,7 @@ public class AccountRepository {
             preparedStatement.setLong(1,acc_no);
             ResultSet set = preparedStatement.executeQuery();
             set.next();
-            if(!"Closed".equals(set.getString(1))){
+            if("Closed".equals(set.getString(1))){
                 return false;
             }
 
@@ -146,6 +146,31 @@ public class AccountRepository {
 
         }catch (SQLException e){
             System.out.println("Failed in closeAccount : "+e.getMessage());
+        }
+    }
+
+    public void deposite(double amount,long acc_no){
+        String sql = """
+                UPDATE accounts
+                SET balance = balance + ?
+                WHERE id = ?
+                """;
+        try(
+                Connection connection = DriverManager.getConnection(url,username,password);
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        ){
+            preparedStatement.setDouble(1, amount);
+            preparedStatement.setLong(2,acc_no);
+
+            int res = preparedStatement.executeUpdate();
+            if(res>0){
+                System.out.println(res+" rows effected");
+            }else{
+                System.out.println("0 roes effected");
+            }
+
+        }catch (SQLException e){
+            System.out.println("Failed at deposit "+e.getMessage());
         }
     }
 }

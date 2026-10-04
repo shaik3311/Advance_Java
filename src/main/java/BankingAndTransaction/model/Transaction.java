@@ -9,6 +9,7 @@ public class Transaction {
     private double amount;
     private String reference;
     private LocalDateTime created_at;
+    private long destination_acc_id;
 
     Transaction(){}
 
@@ -67,5 +68,13 @@ public class Transaction {
 
     public void setCreated_at(LocalDateTime created_at) {
         this.created_at = created_at;
+    }
+
+    public long getDestination_acc_id() {
+        return destination_acc_id;
+    }
+
+    public void setDestination_acc_id(long destination_acc_id) {
+        this.destination_acc_id = destination_acc_id;
     }
 }
