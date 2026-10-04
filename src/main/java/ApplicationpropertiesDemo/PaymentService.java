@@ -22,4 +22,10 @@ public class PaymentService {
         return paymentProperties.isEnabled();
     }
 
+    public void print(){
+        System.out.println(getPaymentType());
+        System.out.println(getCurrency());
+        System.out.println(isEnabled());
+    }
+
 }
