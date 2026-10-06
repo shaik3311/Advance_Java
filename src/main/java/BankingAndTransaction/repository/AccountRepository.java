@@ -1,5 +1,6 @@
 package BankingAndTransaction.repository;
 
+import BankingAndTransaction.exception.InsufficientBalanceException;
 import BankingAndTransaction.model.Account;
 import BankingAndTransaction.service.AccountService;
 
@@ -153,7 +154,7 @@ public class AccountRepository {
         String sql = """
                 UPDATE accounts
                 SET balance = balance + ?
-                WHERE id = ?
+                WHERE account_number = ?
                 """;
         try(
                 Connection connection = DriverManager.getConnection(url,username,password);
@@ -172,5 +173,62 @@ public class AccountRepository {
         }catch (SQLException e){
             System.out.println("Failed at deposit "+e.getMessage());
         }
+    }
+
+    public void withDraw(long acc_no, double amount) throws InsufficientBalanceException{
+        String sql = """
+                UPDATE accounts
+                SET balance = balance - ?
+                WHERE account_number = ?
+                """;
+        try(
+                Connection connection = DriverManager.getConnection(url,username,password);
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ){
+            if(amount>getBalance(acc_no)){
+                throw new InsufficientBalanceException("Insufficient Balance");
+            }
+            preparedStatement.setDouble(1,amount);
+            preparedStatement.setLong(2,acc_no);
+            int res = preparedStatement.executeUpdate();
+            if(res>0){
+                System.out.println(res+" rows effected");
+            }else{
+                System.out.println("0 rows effected");
+            }
+
+        }catch (SQLException e){
+            System.out.println("Failed at withDraw : "+e.getMessage());
+        }
+    }
+
+    public void transfer(long source_acc_no, long destination_acc_no, double amount){
+        if(getBalance(source_acc_no)>=amount){
+            try {
+                withDraw(source_acc_no, amount);
+                deposite(amount, destination_acc_no);
+            } catch (InsufficientBalanceException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public long getId(long acc_no){
+        String sql = """
+                SELECT id FROM accounts WHERE account_number = ?
+                """;
+        try(
+                Connection connection = DriverManager.getConnection(url,username,password);
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ){
+            preparedStatement.setLong(1,acc_no);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            return resultSet.getInt("id");
+
+        }catch (SQLException e){
+            System.out.println("Failed at getId : "+e.getMessage());
+        }
+        return -1;
     }
 }
