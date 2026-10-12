@@ -1,5 +1,7 @@
 package jdbcDemo.preparedStatementDemo;
 
+import ch.qos.logback.core.spi.ScanException;
+
 import java.sql.*;
 import java.util.Scanner;
 
@@ -8,7 +10,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean turn = true;
         while(turn){
-            System.out.println("1.Insert Students\n2.update Student\n3.Delete student\n4.Exit");
+            System.out.println("1.Insert Students\n2.update Student\n3.Delete student\n4.Get Students\n5.Get Student By Id\n6.Exit");
             System.out.print("Select an option : ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -20,6 +22,11 @@ public class Main {
                 }case 3->{
                     delete();
                 }case 4->{
+                    getStudent();
+                }case 5->{
+                    getStudentById();
+                }
+                case 6->{
                     turn = false;
                 }
             }
@@ -103,6 +110,49 @@ public class Main {
             System.out.println(res+" rows effected");
         }catch (SQLException e){
             System.out.println(e.getMessage());
+        }
+    }
+
+    public static void getStudent(){
+        String sql = """
+                SELECT * FROM students 
+                """;
+        try(
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc?user=root&&password=SQL@9100");
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                ){
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                System.out.println("{ id : "+resultSet.getInt("std_id")+" name : "+resultSet.getString("std_name")+" RollNo : "+resultSet.getString("std_rollNo")+" Subject : "+resultSet.getString("std_subject"));
+            }
+
+        }catch (SQLException e){
+            System.out.println("Failed at get student by id : "+e.getMessage());
+        }
+    }
+
+    public static void getStudentById(){
+        String sql = """
+                SELECT * FROM students WHERE std_id=?
+                """;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter id of the student : ");
+        int id = sc.nextInt();
+        try(
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc?user=root&&password=SQL@9100");
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        ){
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if(resultSet.next()) {
+                System.out.println("{ id : " + resultSet.getInt("std_id") + " name : " + resultSet.getString("std_name") + " RollNo : " + resultSet.getString("std_rollNo") + " Subject : " + resultSet.getString("std_subject"));
+            }else{
+                System.out.println("No Such Student Found !");
+            }
+        }catch (SQLException e){
+            System.out.println("Failed at get student by id : "+e.getMessage());
         }
     }
 }
